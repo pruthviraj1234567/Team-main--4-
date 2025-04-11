@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript Quiz</title>
+  <style>
+       body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background: url('/Team-main/Team-main/images/img2..jpg') no-repeat center center fixed;
+  background-size: cover;
+  margin: 0;
+  min-height: 100vh;
+}
+
+.quiz-container {
+  background: rgba(255, 255, 255, 0.95); /* smooth translucent look */
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 800px;
+  margin: auto;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+    h2 { color: #333; }
+    .question {
+      margin-bottom: 20px;
+    }
+    .question p {
+      font-weight: bold;
+    }
+    label {
+      display: block;
+      margin-left: 10px;
+      cursor: pointer;
+    }
+    #submit-btn {
+      padding: 10px 20px;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    #result {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+    .correct { color: green; }
+    .incorrect { color: red; }
+  </style>
+</head>
+<body>
+
+<div class="quiz-container">
+  <h2>JavaScript Quiz - 20 Questions</h2>
+  <form id="quizForm">
+
+    <div class="question"><p>1. Which company developed JavaScript?</p>
+      <label><input type="radio" name="q1" value="true"> Netscape</label>
+      <label><input type="radio" name="q1" value="false"> Microsoft</label>
+      <label><input type="radio" name="q1" value="false"> Sun Microsystems</label>
+      <label><input type="radio" name="q1" value="false"> IBM</label>
+    </div>
+
+    <div class="question"><p>2. Inside which HTML element do we put JavaScript code?</p>
+      <label><input type="radio" name="q2" value="true">&lt;script&gt;</label>
+      <label><input type="radio" name="q2" value="false">&lt;js&gt;</label>
+      <label><input type="radio" name="q2" value="false">&lt;javascript&gt;</label>
+      <label><input type="radio" name="q2" value="false">&lt;code&gt;</label>
+    </div>
+
+    <div class="question"><p>3. What is the correct syntax for referring to an external script?</p>
+      <label><input type="radio" name="q3" value="true">&lt;script src="script.js"&gt;&lt;/script&gt;</label>
+      <label><input type="radio" name="q3" value="false">&lt;script href="script.js"&gt;&lt;/script&gt;</label>
+      <label><input type="radio" name="q3" value="false">&lt;link rel="script" href="script.js"&gt;</label>
+      <label><input type="radio" name="q3" value="false">&lt;js src="script.js"&gt;</label>
+    </div>
+
+    <div class="question"><p>4. How do you create a function in JavaScript?</p>
+      <label><input type="radio" name="q4" value="true">function myFunction() {}</label>
+      <label><input type="radio" name="q4" value="false">function:myFunction()</label>
+      <label><input type="radio" name="q4" value="false">create myFunction()</label>
+      <label><input type="radio" name="q4" value="false">def myFunction()</label>
+    </div>
+
+    <div class="question"><p>5. How to call a function named <code>myFunc</code>?</p>
+      <label><input type="radio" name="q5" value="true">myFunc();</label>
+      <label><input type="radio" name="q5" value="false">call myFunc();</label>
+      <label><input type="radio" name="q5" value="false">execute myFunc();</label>
+      <label><input type="radio" name="q5" value="false">run myFunc();</label>
+    </div>
+
+    <div class="question"><p>6. Which is the correct way to write an array?</p>
+      <label><input type="radio" name="q6" value="true">let arr = [1, 2, 3];</label>
+      <label><input type="radio" name="q6" value="false">let arr = (1, 2, 3);</label>
+      <label><input type="radio" name="q6" value="false">let arr = {1, 2, 3};</label>
+      <label><input type="radio" name="q6" value="false">let arr = 1,2,3;</label>
+    </div>
+
+    <div class="question"><p>7. What keyword is used to declare a variable in JavaScript?</p>
+      <label><input type="radio" name="q7" value="true">let</label>
+      <label><input type="radio" name="q7" value="false">dim</label>
+      <label><input type="radio" name="q7" value="false">define</label>
+      <label><input type="radio" name="q7" value="false">varname</label>
+    </div>
+
+    <div class="question"><p>8. Which operator is used to assign a value to a variable?</p>
+      <label><input type="radio" name="q8" value="true">=</label>
+      <label><input type="radio" name="q8" value="false">==</label>
+      <label><input type="radio" name="q8" value="false">===</label>
+      <label><input type="radio" name="q8" value="false">:=</label>
+    </div>
+
+    <div class="question"><p>9. What is the correct way to comment in JavaScript?</p>
+      <label><input type="radio" name="q9" value="true">// This is a comment</label>
+      <label><input type="radio" name="q9" value="false"># This is a comment</label>
+      <label><input type="radio" name="q9" value="false">&lt;!-- This is a comment --&gt;</label>
+      <label><input type="radio" name="q9" value="false">/* This is a comment --&gt;</label>
+    </div>
+
+    <div class="question"><p>10. How can you detect the type of a variable?</p>
+      <label><input type="radio" name="q10" value="true">typeof</label>
+      <label><input type="radio" name="q10" value="false">typeOf()</label>
+      <label><input type="radio" name="q10" value="false">detect()</label>
+      <label><input type="radio" name="q10" value="false">checkType</label>
+    </div>
+
+    <div class="question"><p>11. What is the output of <code>typeof null</code>?</p>
+      <label><input type="radio" name="q11" value="true">object</label>
+      <label><input type="radio" name="q11" value="false">null</label>
+      <label><input type="radio" name="q11" value="false">undefined</label>
+      <label><input type="radio" name="q11" value="false">boolean</label>
+    </div>
+
+    <div class="question"><p>12. Which method adds an item to the end of an array?</p>
+      <label><input type="radio" name="q12" value="true">push()</label>
+      <label><input type="radio" name="q12" value="false">append()</label>
+      <label><input type="radio" name="q12" value="false">insert()</label>
+      <label><input type="radio" name="q12" value="false">add()</label>
+    </div>
+
+    <div class="question"><p>13. Which event occurs when the user clicks on an HTML element?</p>
+      <label><input type="radio" name="q13" value="true">onclick</label>
+      <label><input type="radio" name="q13" value="false">onchange</label>
+      <label><input type="radio" name="q13" value="false">onmouseover</label>
+      <label><input type="radio" name="q13" value="false">onload</label>
+    </div>
+
+    <div class="question"><p>14. What will <code>"5" + 2</code> return?</p>
+      <label><input type="radio" name="q14" value="true">52</label>
+      <label><input type="radio" name="q14" value="false">7</label>
+      <label><input type="radio" name="q14" value="false">undefined</label>
+      <label><input type="radio" name="q14" value="false">NaN</label>
+    </div>
+
+    <div class="question"><p>15. How do you write an if statement in JavaScript?</p>
+      <label><input type="radio" name="q15" value="true">if (x > y) {}</label>
+      <label><input type="radio" name="q15" value="false">if x > y then {}</label>
+      <label><input type="radio" name="q15" value="false">if x > y: {}</label>
+      <label><input type="radio" name="q15" value="false">if x > y {}</label>
+    </div>
+
+    <div class="question"><p>16. Which symbol is used for strict equality?</p>
+      <label><input type="radio" name="q16" value="true">===</label>
+      <label><input type="radio" name="q16" value="false">==</label>
+      <label><input type="radio" name="q16" value="false">=</label>
+      <label><input type="radio" name="q16" value="false">!==</label>
+    </div>
+
+    <div class="question"><p>17. What will <code>typeof NaN</code> return?</p>
+      <label><input type="radio" name="q17" value="true">number</label>
+      <label><input type="radio" name="q17" value="false">NaN</label>
+      <label><input type="radio" name="q17" value="false">undefined</label>
+      <label><input type="radio" name="q17" value="false">string</label>
+    </div>
+
+    <div class="question"><p>18. What is the correct way to write a for loop?</p>
+      <label><input type="radio" name="q18" value="true">for (let i = 0; i &lt; 5; i++)</label>
+      <label><input type="radio" name="q18" value="false">for i = 1 to 5</label>
+      <label><input type="radio" name="q18" value="false">loop i from 1 to 5</label>
+      <label><input type="radio" name="q18" value="false">repeat i &lt; 5</label>
+    </div>
+
+    <div class="question"><p>19. Which built-in method reverses an array?</p>
+      <label><input type="radio" name="q19" value="true">reverse()</label>
+      <label><input type="radio" name="q19" value="false">invert()</label>
+      <label><input type="radio" name="q19" value="false">flip()</label>
+      <label><input type="radio" name="q19" value="false">backward()</label>
+    </div>
+
+    <div class="question"><p>20. What does <code>document.getElementById()</code> return?</p>
+      <label><input type="radio" name="q20" value="true">A single HTML element</label>
+      <label><input type="radio" name="q20" value="false">All HTML elements</label>
+      <label><input type="radio" name="q20" value="false">An array of elements</label>
+      <label><input type="radio" name="q20" value="false">A string</label>
+    </div>
+
+    <button type="button" id="submit-btn">Submit</button>
+  </form>
+  <div id="result"></div>
+</div>
+
+<script>
+  document.getElementById('submit-btn').addEventListener('click', function () {
+    const form = document.forms['quizForm'];
+    let score = 0;
+    const total = 20;
+
+    for (let i = 1; i <= total; i++) {
+      const radios = form['q' + i];
+      for (let radio of radios) {
+        radio.parentElement.classList.remove('correct', 'incorrect');
+        if (radio.checked) {
+          if (radio.value === 'true') {
+            score++;
+            radio.parentElement.classList.add('correct');
+          } else {
+            radio.parentElement.classList.add('incorrect');
+          }
+        }
+      }
+    }
+
+    document.getElementById('result').innerText = `You scored ${score} out of ${total}`;
+  });
+</script>
+
+</body>
+</html>

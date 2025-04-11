@@ -1,0 +1,262 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MentorMaze - Your Mentorship Partner</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #5e60ce;
+      --secondary: #7400b8;
+      --accent: #80ffdb;
+      --bg-dark: #03045e;
+      --text-light: #f8f9fa;
+      --glass: rgba(255, 255, 255, 0.08);
+    }* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, var(--bg-dark), var(--secondary));
+  color: var(--text-light);
+  overflow-x: hidden;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 3rem;
+  background: var(--glass);
+  backdrop-filter: blur(10px);
+  border-bottom: 2px solid var(--accent);
+  animation: slideDown 1s ease;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-100%); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+header h1 {
+  font-size: 2rem;
+  color: var(--accent);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--text-light);
+  font-weight: 600;
+  position: relative;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -3px;
+  left: 0;
+  background-color: var(--accent);
+  transition: width 0.3s ease-in-out;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem 2rem 2rem;
+  background: linear-gradient(to right, #3f37c9, #4895ef);
+  clip-path: ellipse(100% 85% at 50% 15%);
+  animation: fadeIn 2s ease-in-out;
+  text-align: center;
+}
+
+.landing h2 {
+  font-size: 3rem;
+  color: #fff;
+  margin-bottom: 1rem;
+  animation: pulse 2.5s infinite alternate;
+}
+
+@keyframes pulse {
+  from { transform: scale(1); }
+  to { transform: scale(1.03); }
+}
+
+.slider {
+  font-size: 1.5rem;
+  color: #ffda77;
+  margin-bottom: 2rem;
+  height: 40px;
+  overflow: hidden;
+  position: relative;
+}
+
+.slider span {
+  display: inline-block;
+  animation: slideText 6s linear infinite;
+  white-space: nowrap;
+}
+
+@keyframes slideText {
+  0% { transform: translateY(0%); }
+  25% { transform: translateY(-100%); }
+  50% { transform: translateY(-200%); }
+  75% { transform: translateY(-300%); }
+  100% { transform: translateY(-400%); }
+}
+
+.slider span > div {
+  height: 40px;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.cta-buttons button {
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 50px;
+  background: var(--accent);
+  color: var(--bg-dark);
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, background 0.3s;
+}
+
+.cta-buttons button:hover {
+  background: #64dfdf;
+  transform: scale(1.1);
+}
+
+.image-container {
+  margin-top: 4rem;
+  text-align: center;
+  animation: fadeInUp 2s ease;
+}
+
+@keyframes fadeInUp {
+  from { transform: translateY(50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.image-container img {
+  max-width: 450px;
+  border-radius: 30px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  transition: transform 0.4s ease;
+}
+
+.image-container img:hover {
+  transform: scale(1.05);
+}
+
+.testimonials {
+  margin: 4rem auto 2rem;
+  padding: 2rem;
+  max-width: 900px;
+  text-align: center;
+  background: rgba(255,255,255,0.05);
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  animation: fadeIn 2s ease-in;
+}
+
+.testimonial {
+  display: none;
+  font-style: italic;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.testimonial.active {
+  display: block;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: rgba(0, 0, 0, 0.4);
+  font-size: 0.9rem;
+  margin-top: 3rem;
+  border-top: 1px solid var(--accent);
+  color: #ddd;
+  animation: fadeIn 3s ease;
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>MentorMaze</h1>
+    <nav>
+      <ul>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="block.html">Blogs</a></li>
+      </ul>
+    </nav>
+  </header>  <main class="index">
+    <section class="landing">
+      <h2>Find Your Perfect Mentor or Mentee</h2>
+      <div class="slider">
+        <span>
+          <div>Grow Together</div>
+          <div>Build Better Teams</div>
+          <div>Achieve Your Goals</div>
+          <div>Unlock New Opportunities</div>
+          <div>Learn. Lead. Level Up.</div>
+        </span>
+      </div>
+      <div class="cta-buttons">
+        <a href="login.html"><button>Login</button></a>
+        <a href="resistation.html"><button>Register</button></a>
+      </div>
+    </section><section class="image-container">
+  <img src="./onboarding_image.png" alt="Mentorship Visual" />
+</section>
+
+<section class="testimonials">
+  <div class="testimonial active">“This platform helped me find a mentor who guided me through my final year project!” – Aayush, Final Year Student</div>
+  <div class="testimonial">“As a mentor, I connected with some really passionate juniors. A great initiative!” – Priya, Software Engineer</div>
+  <div class="testimonial">“We formed a dream team for a hackathon and won! All thanks to MentorMaze.” – Karan, 2nd Year</div>
+</section>
+
+  </main>  <footer>
+    <p>© 2024 MentorMaze. All rights reserved.</p>
+  </footer>  <script>
+    const testimonials = document.querySelectorAll('.testimonial');
+    let current = 0;
+    setInterval(() => {
+      testimonials[current].classList.remove('active');
+      current = (current + 1) % testimonials.length;
+      testimonials[current].classList.add('active');
+    }, 4000);
+  </script></body>
+</html>

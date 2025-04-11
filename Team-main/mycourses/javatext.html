@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Java Quiz - 20 Questions</title>
+  <style>
+       body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background: url('/Team-main/Team-main/images/img2..jpg') no-repeat center center fixed;
+  background-size: cover;
+  margin: 0;
+  min-height: 100vh;
+}
+
+.quiz-container {
+  background: rgba(255, 255, 255, 0.95); /* smooth translucent look */
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 800px;
+  margin: auto;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+    h2 {
+      color: #333;
+    }
+    .question {
+      margin-bottom: 20px;
+    }
+    .question p {
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+    .question label {
+      display: block;
+      margin-left: 10px;
+      cursor: pointer;
+    }
+    .correct {
+      color: green;
+      font-weight: bold;
+    }
+    .incorrect {
+      color: red;
+      font-weight: bold;
+    }
+    #submit-btn {
+      padding: 10px 20px;
+      font-size: 16px;
+      background: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    #result {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+<div class="quiz-container">
+  <h2>Java Quiz - 20 Questions</h2>
+  <form id="quizForm">
+
+    <!-- Questions start here -->
+    <div class="question"><p>1. What is the size of int in Java?</p>
+      <label><input type="radio" name="q1" value="false"> 2 bytes</label>
+      <label><input type="radio" name="q1" value="true"> 4 bytes</label>
+      <label><input type="radio" name="q1" value="false"> 8 bytes</label>
+      <label><input type="radio" name="q1" value="false"> Depends on system</label>
+    </div>
+
+    <div class="question"><p>2. Which keyword is used to inherit a class in Java?</p>
+      <label><input type="radio" name="q2" value="true"> extends</label>
+      <label><input type="radio" name="q2" value="false"> implements</label>
+      <label><input type="radio" name="q2" value="false"> inherits</label>
+      <label><input type="radio" name="q2" value="false"> interface</label>
+    </div>
+
+    <div class="question"><p>3. Which of these is not a Java feature?</p>
+      <label><input type="radio" name="q3" value="true"> Use of pointers</label>
+      <label><input type="radio" name="q3" value="false"> Object-oriented</label>
+      <label><input type="radio" name="q3" value="false"> Portable</label>
+      <label><input type="radio" name="q3" value="false"> Dynamic</label>
+    </div>
+
+    <div class="question"><p>4. What is the default value of a boolean variable?</p>
+      <label><input type="radio" name="q4" value="true"> false</label>
+      <label><input type="radio" name="q4" value="false"> true</label>
+      <label><input type="radio" name="q4" value="false"> 0</label>
+      <label><input type="radio" name="q4" value="false"> null</label>
+    </div>
+
+    <div class="question"><p>5. What is used to create an object in Java?</p>
+      <label><input type="radio" name="q5" value="true"> new keyword</label>
+      <label><input type="radio" name="q5" value="false"> create keyword</label>
+      <label><input type="radio" name="q5" value="false"> init method</label>
+      <label><input type="radio" name="q5" value="false"> build function</label>
+    </div>
+
+    <div class="question"><p>6. What does JVM stand for?</p>
+      <label><input type="radio" name="q6" value="true"> Java Virtual Machine</label>
+      <label><input type="radio" name="q6" value="false"> Java Variable Method</label>
+      <label><input type="radio" name="q6" value="false"> Java Verified Module</label>
+      <label><input type="radio" name="q6" value="false"> Java Version Manager</label>
+    </div>
+
+    <div class="question"><p>7. Which package contains the Scanner class?</p>
+      <label><input type="radio" name="q7" value="true"> java.util</label>
+      <label><input type="radio" name="q7" value="false"> java.io</label>
+      <label><input type="radio" name="q7" value="false"> java.lang</label>
+      <label><input type="radio" name="q7" value="false"> java.scan</label>
+    </div>
+
+    <div class="question"><p>8. What is the output of System.out.println(5 + "3");?</p>
+      <label><input type="radio" name="q8" value="true"> 53</label>
+      <label><input type="radio" name="q8" value="false"> 8</label>
+      <label><input type="radio" name="q8" value="false"> Error</label>
+      <label><input type="radio" name="q8" value="false"> "8"</label>
+    </div>
+
+    <div class="question"><p>9. Which operator is used for comparison in Java?</p>
+      <label><input type="radio" name="q9" value="true"> ==</label>
+      <label><input type="radio" name="q9" value="false"> =</label>
+      <label><input type="radio" name="q9" value="false"> !=</label>
+      <label><input type="radio" name="q9" value="false"> <></label>
+    </div>
+
+    <div class="question"><p>10. Which keyword prevents method overriding?</p>
+      <label><input type="radio" name="q10" value="true"> final</label>
+      <label><input type="radio" name="q10" value="false"> static</label>
+      <label><input type="radio" name="q10" value="false"> abstract</label>
+      <label><input type="radio" name="q10" value="false"> private</label>
+    </div>
+
+    <div class="question"><p>11. Java is a ______ language.</p>
+      <label><input type="radio" name="q11" value="true"> Object-Oriented</label>
+      <label><input type="radio" name="q11" value="false"> Functional</label>
+      <label><input type="radio" name="q11" value="false"> Procedural</label>
+      <label><input type="radio" name="q11" value="false"> Scripting</label>
+    </div>
+
+    <div class="question"><p>12. What will 10 / 3 return in Java (int division)?</p>
+      <label><input type="radio" name="q12" value="true"> 3</label>
+      <label><input type="radio" name="q12" value="false"> 3.33</label>
+      <label><input type="radio" name="q12" value="false"> 3.0</label>
+      <label><input type="radio" name="q12" value="false"> Error</label>
+    </div>
+
+    <div class="question"><p>13. Which collection class maintains insertion order?</p>
+      <label><input type="radio" name="q13" value="true"> LinkedHashMap</label>
+      <label><input type="radio" name="q13" value="false"> HashMap</label>
+      <label><input type="radio" name="q13" value="false"> TreeMap</label>
+      <label><input type="radio" name="q13" value="false"> HashSet</label>
+    </div>
+
+    <div class="question"><p>14. Which access modifier makes a member visible to all classes?</p>
+      <label><input type="radio" name="q14" value="true"> public</label>
+      <label><input type="radio" name="q14" value="false"> private</label>
+      <label><input type="radio" name="q14" value="false"> protected</label>
+      <label><input type="radio" name="q14" value="false"> default</label>
+    </div>
+
+    <div class="question"><p>15. Which of these is a valid loop in Java?</p>
+      <label><input type="radio" name="q15" value="true"> for</label>
+      <label><input type="radio" name="q15" value="false"> repeat</label>
+      <label><input type="radio" name="q15" value="false"> foreach</label>
+      <label><input type="radio" name="q15" value="false"> loop</label>
+    </div>
+
+    <div class="question"><p>16. What is the parent class of all Java classes?</p>
+      <label><input type="radio" name="q16" value="true"> Object</label>
+      <label><input type="radio" name="q16" value="false"> Class</label>
+      <label><input type="radio" name="q16" value="false"> Parent</label>
+      <label><input type="radio" name="q16" value="false"> Base</label>
+    </div>
+
+    <div class="question"><p>17. Which keyword is used to handle exceptions?</p>
+      <label><input type="radio" name="q17" value="true"> try</label>
+      <label><input type="radio" name="q17" value="false"> exception</label>
+      <label><input type="radio" name="q17" value="false"> error</label>
+      <label><input type="radio" name="q17" value="false"> throwcatch</label>
+    </div>
+
+    <div class="question"><p>18. Which of these is not a primitive type in Java?</p>
+      <label><input type="radio" name="q18" value="true"> String</label>
+      <label><input type="radio" name="q18" value="false"> int</label>
+      <label><input type="radio" name="q18" value="false"> boolean</label>
+      <label><input type="radio" name="q18" value="false"> char</label>
+    </div>
+
+    <div class="question"><p>19. Which symbol is used to denote a single-line comment?</p>
+      <label><input type="radio" name="q19" value="true"> //</label>
+      <label><input type="radio" name="q19" value="false"> #</label>
+      <label><input type="radio" name="q19" value="false"> !</label>
+      <label><input type="radio" name="q19" value="false"> /* */</label>
+    </div>
+
+    <div class="question"><p>20. What does the static keyword mean in Java?</p>
+      <label><input type="radio" name="q20" value="true"> Belongs to the class, not instance</label>
+      <label><input type="radio" name="q20" value="false"> Executes at runtime only</label>
+      <label><input type="radio" name="q20" value="false"> Runs only once</label>
+      <label><input type="radio" name="q20" value="false"> Immutable</label>
+    </div>
+
+    <button type="button" id="submit-btn">Submit</button>
+  </form>
+  <div id="result"></div>
+</div>
+
+<script>
+  document.getElementById('submit-btn').addEventListener('click', function () {
+    const form = document.forms['quizForm'];
+    let score = 0;
+    const total = 20;
+
+    for (let i = 1; i <= total; i++) {
+      const radios = form['q' + i];
+      for (let radio of radios) {
+        radio.parentElement.classList.remove('correct', 'incorrect');
+        if (radio.checked) {
+          if (radio.value === 'true') {
+            score++;
+            radio.parentElement.classList.add('correct');
+          } else {
+            radio.parentElement.classList.add('incorrect');
+          }
+        }
+      }
+    }
+
+    document.getElementById('result').innerHTML = `You scored ${score} out of ${total}`;
+  });
+</script>
+
+</body>
+</html>

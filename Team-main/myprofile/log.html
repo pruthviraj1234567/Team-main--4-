@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #f2f2f2;
+        }
+
+        .profile-container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            position: relative;
+            width: 300px;
+        }
+
+        .avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .edit-avatar {
+            position: absolute;
+            top: 90px;
+            right: 110px;
+            background: #000;
+            color: #fff;
+            border-radius: 50%;
+            padding: 5px;
+            cursor: pointer;
+        }
+
+        .edit-name {
+            margin-left: 10px;
+            cursor: pointer;
+            color: #555;
+        }
+
+        input[type="file"] {
+            display: none;
+        }
+
+        input[type="text"] {
+            font-size: 18px;
+            text-align: center;
+            border: none;
+            border-bottom: 1px solid #ccc;
+            outline: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="profile-container">
+        <div class="avatar-container">
+            <img src="avatar.png" alt="Avatar" class="avatar" id="avatarImage">
+            <label for="avatarInput" class="edit-avatar"><i class="fas fa-pencil-alt"></i></label>
+            <input type="file" id="avatarInput" accept="image/*">
+        </div>
+
+        <h2>
+            <span id="userName">Your Name</span>
+            <i class="fas fa-pencil-alt edit-name" onclick="editName()"></i>
+        </h2>
+    </div>
+
+
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <script>
+        const avatarInput = document.getElementById('avatarInput');
+        const avatarImage = document.getElementById('avatarImage');
+        const userName = document.getElementById('userName');
+
+        avatarInput.addEventListener('change', function () {
+            const file = this.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    avatarImage.src = e.target.result;
+                }
+                reader.readAsDataURL(file);
+            }
+        });
+
+        function editName() {
+            const currentName = userName.innerText;
+            const input = document.createElement('input');
+            input.type = 'text';
+            input.value = currentName;
+            input.addEventListener('blur', function () {
+                userName.innerText = this.value;
+            });
+            userName.innerText = '';
+            userName.appendChild(input);
+            input.focus();
+        }
+    </script>
+
+</body>
+
+</html>

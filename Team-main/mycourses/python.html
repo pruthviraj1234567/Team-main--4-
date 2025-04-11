@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Python Quiz - 20 Questions</title>
+  <style>
+       body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background: url('newimg.jpg') no-repeat center center fixed;
+  background-size: cover;
+  margin: 0;
+  min-height: 100vh;
+}
+
+.quiz-container {
+  background: rgba(255, 255, 255, 0.95); /* smooth translucent look */
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 800px;
+  margin: auto;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+    h2 { color: #333; }
+    .question { margin-bottom: 20px; }
+    .question p { font-weight: bold; margin-bottom: 5px; }
+    label { display: block; margin-left: 10px; }
+    #submit-btn {
+      padding: 10px 20px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    #result {
+      margin-top: 20px;
+      font-weight: bold;
+      font-size: 18px;
+    }
+    .correct { color: green; }
+    .incorrect { color: red; }
+  </style>
+</head>
+<body>
+
+<div class="quiz-container">
+  <h2>Python Quiz - 20 Questions</h2>
+  <form id="quizForm">
+
+    <div class="question"><p>1. What is the correct file extension for Python files?</p>
+      <label><input type="radio" name="q1" value="true"> .py</label>
+      <label><input type="radio" name="q1" value="false"> .pt</label>
+      <label><input type="radio" name="q1" value="false"> .pyt</label>
+      <label><input type="radio" name="q1" value="false"> .python</label>
+    </div>
+
+    <div class="question"><p>2. What keyword is used to define a function in Python?</p>
+      <label><input type="radio" name="q2" value="true"> def</label>
+      <label><input type="radio" name="q2" value="false"> function</label>
+      <label><input type="radio" name="q2" value="false"> define</label>
+      <label><input type="radio" name="q2" value="false"> func</label>
+    </div>
+
+    <div class="question"><p>3. Which data type is immutable?</p>
+      <label><input type="radio" name="q3" value="true"> tuple</label>
+      <label><input type="radio" name="q3" value="false"> list</label>
+      <label><input type="radio" name="q3" value="false"> dict</label>
+      <label><input type="radio" name="q3" value="false"> set</label>
+    </div>
+
+    <div class="question"><p>4. Which of these is a correct variable name?</p>
+      <label><input type="radio" name="q4" value="true"> my_variable</label>
+      <label><input type="radio" name="q4" value="false"> 2variable</label>
+      <label><input type="radio" name="q4" value="false"> my-variable</label>
+      <label><input type="radio" name="q4" value="false"> @var</label>
+    </div>
+
+    <div class="question"><p>5. How do you write a comment in Python?</p>
+      <label><input type="radio" name="q5" value="true"> # This is a comment</label>
+      <label><input type="radio" name="q5" value="false"> // This is a comment</label>
+      <label><input type="radio" name="q5" value="false"> <!-- This is a comment --></label>
+      <label><input type="radio" name="q5" value="false"> /* This is a comment */</label>
+    </div>
+
+    <div class="question"><p>6. What does the len() function do?</p>
+      <label><input type="radio" name="q6" value="true"> Returns the number of items</label>
+      <label><input type="radio" name="q6" value="false"> Adds numbers</label>
+      <label><input type="radio" name="q6" value="false"> Counts characters only</label>
+      <label><input type="radio" name="q6" value="false"> None of the above</label>
+    </div>
+
+    <div class="question"><p>7. Which keyword is used to loop over a sequence?</p>
+      <label><input type="radio" name="q7" value="true"> for</label>
+      <label><input type="radio" name="q7" value="false"> loop</label>
+      <label><input type="radio" name="q7" value="false"> repeat</label>
+      <label><input type="radio" name="q7" value="false"> each</label>
+    </div>
+
+    <div class="question"><p>8. How do you create a dictionary?</p>
+      <label><input type="radio" name="q8" value="true"> { "key": "value" }</label>
+      <label><input type="radio" name="q8" value="false"> [ "key", "value" ]</label>
+      <label><input type="radio" name="q8" value="false"> ( "key": "value" )</label>
+      <label><input type="radio" name="q8" value="false"> &lt;"key"="value"&gt;</label>
+    </div>
+
+    <div class="question"><p>9. What will print(2 ** 3) output?</p>
+      <label><input type="radio" name="q9" value="true"> 8</label>
+      <label><input type="radio" name="q9" value="false"> 6</label>
+      <label><input type="radio" name="q9" value="false"> 9</label>
+      <label><input type="radio" name="q9" value="false"> 5</label>
+    </div>
+
+    <div class="question"><p>10. How do you check equality in Python?</p>
+      <label><input type="radio" name="q10" value="true"> ==</label>
+      <label><input type="radio" name="q10" value="false"> =</label>
+      <label><input type="radio" name="q10" value="false"> ===</label>
+      <label><input type="radio" name="q10" value="false"> !=</label>
+    </div>
+
+    <div class="question"><p>11. Which loop runs at least once before checking condition?</p>
+      <label><input type="radio" name="q11" value="true"> while (condition):</label>
+      <label><input type="radio" name="q11" value="false"> do while</label>
+      <label><input type="radio" name="q11" value="false"> loop</label>
+      <label><input type="radio" name="q11" value="false"> repeat</label>
+    </div>
+
+    <div class="question"><p>12. What does range(5) produce?</p>
+      <label><input type="radio" name="q12" value="true"> 0 to 4</label>
+      <label><input type="radio" name="q12" value="false"> 1 to 5</label>
+      <label><input type="radio" name="q12" value="false"> 1 to 4</label>
+      <label><input type="radio" name="q12" value="false"> 0 to 5</label>
+    </div>
+
+    <div class="question"><p>13. How do you create a class in Python?</p>
+      <label><input type="radio" name="q13" value="true"> class MyClass:</label>
+      <label><input type="radio" name="q13" value="false"> def MyClass:</label>
+      <label><input type="radio" name="q13" value="false"> class = MyClass()</label>
+      <label><input type="radio" name="q13" value="false"> make class MyClass</label>
+    </div>
+
+    <div class="question"><p>14. Which keyword is used to handle exceptions?</p>
+      <label><input type="radio" name="q14" value="true"> try</label>
+      <label><input type="radio" name="q14" value="false"> check</label>
+      <label><input type="radio" name="q14" value="false"> error</label>
+      <label><input type="radio" name="q14" value="false"> test</label>
+    </div>
+
+    <div class="question"><p>15. Which of the following is used to install packages?</p>
+      <label><input type="radio" name="q15" value="true"> pip</label>
+      <label><input type="radio" name="q15" value="false"> python get</label>
+      <label><input type="radio" name="q15" value="false"> install</label>
+      <label><input type="radio" name="q15" value="false"> importlib</label>
+    </div>
+
+    <div class="question"><p>16. What does input() do?</p>
+      <label><input type="radio" name="q16" value="true"> Takes user input</label>
+      <label><input type="radio" name="q16" value="false"> Outputs a value</label>
+      <label><input type="radio" name="q16" value="false"> Declares a variable</label>
+      <label><input type="radio" name="q16" value="false"> Returns system input</label>
+    </div>
+
+    <div class="question"><p>17. Which operator is used for floor division?</p>
+      <label><input type="radio" name="q17" value="true"> // </label>
+      <label><input type="radio" name="q17" value="false"> /</label>
+      <label><input type="radio" name="q17" value="false"> %</label>
+      <label><input type="radio" name="q17" value="false"> **</label>
+    </div>
+
+    <div class="question"><p>18. What is the correct way to import a module?</p>
+      <label><input type="radio" name="q18" value="true"> import math</label>
+      <label><input type="radio" name="q18" value="false"> include math</label>
+      <label><input type="radio" name="q18" value="false"> using math</label>
+      <label><input type="radio" name="q18" value="false"> module math</label>
+    </div>
+
+    <div class="question"><p>19. How do you create a list?</p>
+      <label><input type="radio" name="q19" value="true"> [1, 2, 3]</label>
+      <label><input type="radio" name="q19" value="false"> (1, 2, 3)</label>
+      <label><input type="radio" name="q19" value="false"> {1, 2, 3}</label>
+      <label><input type="radio" name="q19" value="false"> &lt;1, 2, 3&gt;</label>
+    </div>
+
+    <div class="question"><p>20. What does the 'break' statement do?</p>
+      <label><input type="radio" name="q20" value="true"> Exits the loop</label>
+      <label><input type="radio" name="q20" value="false"> Skips current iteration</label>
+      <label><input type="radio" name="q20" value="false"> Exits program</label>
+      <label><input type="radio" name="q20" value="false"> Stops function</label>
+    </div>
+
+    <button type="button" id="submit-btn">Submit</button>
+  </form>
+  <div id="result"></div>
+</div>
+
+<script>
+  document.getElementById('submit-btn').addEventListener('click', function () {
+    const form = document.forms['quizForm'];
+    let score = 0;
+    const total = 20;
+
+    for (let i = 1; i <= total; i++) {
+      const radios = form['q' + i];
+      for (let radio of radios) {
+        radio.parentElement.classList.remove('correct', 'incorrect');
+        if (radio.checked) {
+          if (radio.value === 'true') {
+            score++;
+            radio.parentElement.classList.add('correct');
+          } else {
+            radio.parentElement.classList.add('incorrect');
+          }
+        }
+      }
+    }
+
+    document.getElementById('result').innerText = `You scored ${score} out of ${total}`;
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>C++ Quiz - 20 Questions</title>
+  <style>
+    body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background: url('/Team-main/Team-main/images/img2..jpg') no-repeat center center fixed;
+  background-size: cover;
+  margin: 0;
+  min-height: 100vh;
+}
+
+.quiz-container {
+  background: rgba(255, 255, 255, 0.95); /* smooth translucent look */
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 800px;
+  margin: auto;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+    h2 { color: #333; }
+    .question { margin-bottom: 20px; }
+    .question p { font-weight: bold; margin-bottom: 5px; }
+    label { display: block; margin-left: 10px; }
+    #submit-btn {
+      padding: 10px 20px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    #result {
+      margin-top: 20px;
+      font-weight: bold;
+      font-size: 18px;
+    }
+    .correct { color: green; }
+    .incorrect { color: red; }
+  </style>
+</head>
+<body>
+
+<div class="quiz-container">
+  
+  <h2>C++ Quiz - 20 Questions</h2>
+  <form id="quizForm">
+
+    <div class="question"><p>1. Which of the following is the correct syntax to print "Hello World" in C++?</p>
+      <label><input type="radio" name="q1" value="true"> cout &lt;&lt; "Hello World";</label>
+      <label><input type="radio" name="q1" value="false"> print("Hello World");</label>
+      <label><input type="radio" name="q1" value="false"> Console.WriteLine("Hello World");</label>
+      <label><input type="radio" name="q1" value="false"> echo "Hello World";</label>
+    </div>
+
+    <div class="question"><p>2. Which header file is required for using cout?</p>
+      <label><input type="radio" name="q2" value="true"> iostream</label>
+      <label><input type="radio" name="q2" value="false"> stdio.h</label>
+      <label><input type="radio" name="q2" value="false"> conio.h</label>
+      <label><input type="radio" name="q2" value="false"> stream.h</label>
+    </div>
+
+    <div class="question"><p>3. What is the extension of C++ source file?</p>
+      <label><input type="radio" name="q3" value="true"> .cpp</label>
+      <label><input type="radio" name="q3" value="false"> .c</label>
+      <label><input type="radio" name="q3" value="false"> .py</label>
+      <label><input type="radio" name="q3" value="false"> .java</label>
+    </div>
+
+    <div class="question"><p>4. Which symbol is used to denote a preprocessor directive?</p>
+      <label><input type="radio" name="q4" value="true"> #</label>
+      <label><input type="radio" name="q4" value="false"> $</label>
+      <label><input type="radio" name="q4" value="false"> @</label>
+      <label><input type="radio" name="q4" value="false"> *</label>
+    </div>
+
+    <div class="question"><p>5. Which of these is a correct data type in C++?</p>
+      <label><input type="radio" name="q5" value="true"> float</label>
+      <label><input type="radio" name="q5" value="false"> decimal</label>
+      <label><input type="radio" name="q5" value="false"> number</label>
+      <label><input type="radio" name="q5" value="false"> text</label>
+    </div>
+
+    <div class="question"><p>6. How do you write a single-line comment in C++?</p>
+      <label><input type="radio" name="q6" value="true"> // comment</label>
+      <label><input type="radio" name="q6" value="false"> # comment</label>
+      <label><input type="radio" name="q6" value="false"> <!-- comment --></label>
+      <label><input type="radio" name="q6" value="false"> -- comment</label>
+    </div>
+
+    <div class="question"><p>7. What is the correct way to declare an integer variable?</p>
+      <label><input type="radio" name="q7" value="true"> int x;</label>
+      <label><input type="radio" name="q7" value="false"> integer x;</label>
+      <label><input type="radio" name="q7" value="false"> x = int;</label>
+      <label><input type="radio" name="q7" value="false"> declare x int;</label>
+    </div>
+
+    <div class="question"><p>8. What is the correct way to include a user-defined header file?</p>
+      <label><input type="radio" name="q8" value="true"> #include "myfile.h"</label>
+      <label><input type="radio" name="q8" value="false"> include(myfile);</label>
+      <label><input type="radio" name="q8" value="false"> import "myfile"</label>
+      <label><input type="radio" name="q8" value="false"> #header myfile.h</label>
+    </div>
+
+    <div class="question"><p>9. What is the size of int on most systems?</p>
+      <label><input type="radio" name="q9" value="true"> 4 bytes</label>
+      <label><input type="radio" name="q9" value="false"> 2 bytes</label>
+      <label><input type="radio" name="q9" value="false"> 1 byte</label>
+      <label><input type="radio" name="q9" value="false"> 8 bytes</label>
+    </div>
+
+    <div class="question"><p>10. Which operator is used to get the address of a variable?</p>
+      <label><input type="radio" name="q10" value="true"> &</label>
+      <label><input type="radio" name="q10" value="false"> *</label>
+      <label><input type="radio" name="q10" value="false"> @</label>
+      <label><input type="radio" name="q10" value="false"> %</label>
+    </div>
+
+    <div class="question"><p>11. Which of the following is a correct class declaration?</p>
+      <label><input type="radio" name="q11" value="true"> class MyClass { };</label>
+      <label><input type="radio" name="q11" value="false"> MyClass() class;</label>
+      <label><input type="radio" name="q11" value="false"> declare class MyClass();</label>
+      <label><input type="radio" name="q11" value="false"> class = MyClass;</label>
+    </div>
+
+    <div class="question"><p>12. Which function is the entry point of a C++ program?</p>
+      <label><input type="radio" name="q12" value="true"> main()</label>
+      <label><input type="radio" name="q12" value="false"> start()</label>
+      <label><input type="radio" name="q12" value="false"> init()</label>
+      <label><input type="radio" name="q12" value="false"> execute()</label>
+    </div>
+
+    <div class="question"><p>13. How do you dynamically allocate memory in C++?</p>
+      <label><input type="radio" name="q13" value="true"> new</label>
+      <label><input type="radio" name="q13" value="false"> malloc</label>
+      <label><input type="radio" name="q13" value="false"> alloc</label>
+      <label><input type="radio" name="q13" value="false"> memory</label>
+    </div>
+
+    <div class="question"><p>14. Which of these is a loop structure in C++?</p>
+      <label><input type="radio" name="q14" value="true"> for</label>
+      <label><input type="radio" name="q14" value="false"> repeat</label>
+      <label><input type="radio" name="q14" value="false"> until</label>
+      <label><input type="radio" name="q14" value="false"> jump</label>
+    </div>
+
+    <div class="question"><p>15. Which operator is used for pointer dereferencing?</p>
+      <label><input type="radio" name="q15" value="true"> *</label>
+      <label><input type="radio" name="q15" value="false"> &</label>
+      <label><input type="radio" name="q15" value="false"> @</label>
+      <label><input type="radio" name="q15" value="false"> $</label>
+    </div>
+
+    <div class="question"><p>16. Which of the following is not a keyword in C++?</p>
+      <label><input type="radio" name="q16" value="true"> include</label>
+      <label><input type="radio" name="q16" value="false"> switch</label>
+      <label><input type="radio" name="q16" value="false"> case</label>
+      <label><input type="radio" name="q16" value="false"> return</label>
+    </div>
+
+    <div class="question"><p>17. Which operator is overloaded for output?</p>
+      <label><input type="radio" name="q17" value="true"> &lt;&lt;</label>
+      <label><input type="radio" name="q17" value="false"> &gt;&gt;</label>
+      <label><input type="radio" name="q17" value="false"> ==</label>
+      <label><input type="radio" name="q17" value="false"> ::</label>
+    </div>
+
+    <div class="question"><p>18. What is the value of true in C++?</p>
+      <label><input type="radio" name="q18" value="true"> 1</label>
+      <label><input type="radio" name="q18" value="false"> 0</label>
+      <label><input type="radio" name="q18" value="false"> -1</label>
+      <label><input type="radio" name="q18" value="false"> NULL</label>
+    </div>
+
+    <div class="question"><p>19. Which header file is required for string functions?</p>
+      <label><input type="radio" name="q19" value="true"> string</label>
+      <label><input type="radio" name="q19" value="false"> str.h</label>
+      <label><input type="radio" name="q19" value="false"> strings.h</label>
+      <label><input type="radio" name="q19" value="false"> stdio.h</label>
+    </div>
+
+    <div class="question"><p>20. What is the scope resolution operator?</p>
+      <label><input type="radio" name="q20" value="true"> ::</label>
+      <label><input type="radio" name="q20" value="false"> --</label>
+      <label><input type="radio" name="q20" value="false"> &amp;&amp;</label>
+      <label><input type="radio" name="q20" value="false"> @@</label>
+    </div>
+
+    <button type="button" id="submit-btn">Submit</button>
+  </form>
+  <div id="result"></div>
+</div>
+
+<script>
+  document.getElementById('submit-btn').addEventListener('click', function () {
+    const form = document.forms['quizForm'];
+    let score = 0;
+    const total = 20;
+
+    for (let i = 1; i <= total; i++) {
+      const radios = form['q' + i];
+      for (let radio of radios) {
+        radio.parentElement.classList.remove('correct', 'incorrect');
+        if (radio.checked) {
+          if (radio.value === 'true') {
+            score++;
+            radio.parentElement.classList.add('correct');
+          } else {
+            radio.parentElement.classList.add('incorrect');
+          }
+        }
+      }
+    }
+
+    document.getElementById('result').innerText = `You scored ${score} out of ${total}`;
+  });
+</script>
+
+</body>
+</html>

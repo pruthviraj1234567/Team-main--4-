@@ -1,0 +1,111 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    /* Replace with your image name */
+    background-size: cover;   /* Image will cover the whole screen */
+    background-position: center;  /* Image will stay centered */
+    background-repeat: no-repeat; /* Image will not repeat */
+    color: #333;
+    text-align: center;
+    padding: 40px;
+    background-color: #3EECAC;
+    background-image: linear-gradient(19deg, #3EECAC 0%, #EE74E1 100%);
+    
+
+}
+
+  
+  .typewriter h1 {
+    overflow: hidden;
+    border-right: .15em solid orange;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .15em;
+    animation: 
+      typing 3.5s steps(40, end),
+      blink-caret .75s step-end infinite;
+  }
+  
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange; }
+  }
+  
+  .desc {
+    font-size: 18px;
+    max-width: 700px;
+    margin: 20px auto 50px;
+    line-height: 1.6;
+  }
+  
+  .box-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .box {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    width: 250px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+  }
+  
+  .box:hover {
+    transform: translateY(-5px);
+  }
+  
+  .stars {
+    margin-top: 10px;
+    font-size: 20px;
+    color: orange;
+  }
+    /* ************************Our peoples************* */
+    .profile-img {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 10px;
+        border: 2px solid #ffa500;
+      }
+
+
+
+  /* ************************my button************* */
+
+  /* ************************my button************* */
+  .btn {
+    margin-top: 50px;
+    padding: 0;
+    width: 150px;
+    height: 50px;
+    border: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 25px;
+    background: #833AB4;
+    background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
+    transition: 0.4s ease-in-out;
+  }
+  
+  .btn:hover {
+    color: #EEAECA;
+    background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+    filter: blur(1px);
+  }
+  
+
+
+    /* ************************my button************* */
+  
